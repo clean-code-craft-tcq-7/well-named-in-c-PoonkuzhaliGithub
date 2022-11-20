@@ -2,11 +2,7 @@
 #include <assert.h>
 #include "ColorCoding.h"
 
-void ColorPairToString(const ColorPair* colorPair, char* buffer) {
-    sprintf(buffer, "%s %s",
-        MajorColorNames[colorPair->majorColor],
-        MinorColorNames[colorPair->minorColor]);
-}
+const int MAX_COLORPAIR_NAME_CHARS = 16;
 
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
